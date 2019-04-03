@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>[Seonghi]코딩진행표</title>
+	<link rel="stylesheet" type="text/css" href="_guide/css/common.css"/>
+	<link rel="stylesheet" type="text/css" href="_guide/css/guide.css"/>
+	<style type="text/css">
+		body {background-color:#f9f9f9;}
+	</style>
+	<script type="text/javascript" src="_guide/js/dtree.js"></script>
+</head>
+<body>
+
+	<div id="content_guide_list">
+		<h1>[Seonghi] 코딩진행표</h1>
+		<!-- <h2>프로세스</h2>
+		<ol>
+			<li><span class="txt_ing">코딩진행중</span></li>
+			<li><span class="txt_ask">검수요청</span></li>
+			<li><span class="txt_script">스크립트진행</span></li>
+			<li><span class="txt_confirm">검수완료->개발전달</span></li>
+			<li><span class="txt_modify">개발전달후</span></li>
+		</ol> -->
+	</div>
+
+	<div class="dtree">
+<!-- 업무참고 -->
+		<div class="area_btn">
+			<a href="javascript: d.openAll();"><img src="_guide/img/btn_expand.gif" alt="Expand All" /></a>
+			<a href="javascript: d.closeAll();"><img src="_guide/img/btn_collapse.gif" alt="Collapse All" /></a>
+		</div>
+		<script type="text/javascript">
+			//<![CDATA[
+			d = new dTree('d');
+			d.add(0,-1,'업무참고');
+			d.add(1,0,'개발협의');
+			d.add(1.01,1,'사전협의사항','_guide/html/check_prior.html','템플릿','mainFrame');
+			d.add(1.02,1,'디렉토리구조','_guide/html/check_directory.html','템플릿','mainFrame');
+			d.add(1.03,1,'진행확인','_guide/html/check_process.html','템플릿','mainFrame');
+			document.write(d);
+			//]]>
+		</script>
+<!-- //업무참고 -->
+
+<!-- Guide -->
+		<div class="area_btn">
+			<a href="javascript: g.openAll();"><img src="_guide/img/btn_expand.gif" alt="Expand All" /></a>
+			<a href="javascript: g.closeAll();"><img src="_guide/img/btn_collapse.gif" alt="Collapse All" /></a>
+		</div>
+		<script type="text/javascript">
+			//<![CDATA[
+			g = new dTree('g');
+			g.add(0,-1,'WSG');
+			g.add(200,0,'공통 guide');
+			g.add(200.01,200,'Typo_서체');
+			g.add(200.011,200.01,'Typo_서체','_guide/html/guide_typo.html','템플릿','mainFrame');
+			g.add(200.012,200.01,'Color_컬러','_guide/html/guide_typo_color.html','템플릿','mainFrame');
+			g.add(200.013,200.01,'Title_타이틀','_guide/html/guide_typo_title.html','템플릿','mainFrame');
+			g.add(200.014,200.01,'Size_사이즈','_guide/html/guide_typo_size.html','템플릿','mainFrame');
+			g.add(200.015,200.01,'Etc_기타','_guide/html/guide_typo_etc.html','템플릿','mainFrame');
+			g.add(200.02,200,'Form_입력폼');
+			g.add(200.021,200.02,'Text_텍스트','_guide/html/guide_form_text.html','템플릿','mainFrame');
+			g.add(200.022,200.02,'File_파일','_guide/html/guide_form_file.html','템플릿','mainFrame');
+			g.add(200.023,200.02,'Select_셀렉트','_guide/html/guide_form_select.html','템플릿','mainFrame');
+			g.add(200.024,200.02,'Textarea_텍스트박스','_guide/html/guide_form_textarea.html','템플릿','mainFrame');
+			g.add(200.025,200.02,'CheckBox_체크박스','_guide/html/guide_form_check.html','템플릿','mainFrame');
+			g.add(200.026,200.02,'Radio_라디오버튼','_guide/html/guide_form_radio.html','템플릿','mainFrame');
+			g.add(200.03,200,'Button_버튼');
+			g.add(200.031,200.03,'기본형','_guide/html/guide_button.html','템플릿','mainFrame');
+			g.add(200.032,200.03,'기타','_guide/html/guide_button_etc.html','템플릿','mainFrame');
+			g.add(200.033,200.03,'영역','_guide/html/guide_button_set.html','템플릿','mainFrame');
+			g.add(200.04,200,'Location_현재위치','_guide/html/guide_location.html','템플릿','mainFrame');
+			g.add(200.05,200,'Tab_탭','_guide/html/guide_tab.html','템플릿','mainFrame');
+			g.add(200.06,200,'Paginate_페이징','_guide/html/guide_paginate.html','템플릿','mainFrame');
+			g.add(200.07,200,'Board_게시판');
+			g.add(200.071,200.07,'List_리스트','_guide/html/guide_board_list.html','템플릿','mainFrame');
+			g.add(200.072,200.07,'Write_쓰기','_guide/html/guide_board_write.html','템플릿','mainFrame');
+			g.add(200.073,200.07,'View_보기','_guide/html/guide_board_view.html','템플릿','mainFrame');
+			g.add(200.08,200,'Table_테이블','_guide/html/guide_table.html','템플릿','mainFrame');
+
+			g.add(300,0,'layout');
+			g.add(300.01,300,'SubPage_서브페이지');
+			g.add(300.011,300.01,'SubPage_서브페이지','_guide/html/layout_sub.html','템플릿','mainFrame');
+			g.add(300.013,300.01,'SubPage_서브페이지_메뉴없음(회원/주문)','_guide/html/layout_sub_nomenu.html','템플릿','mainFrame');
+			g.add(300.012,300.01,'SubPage_서브페이지_상품','_guide/html/layout_sub_product.html','템플릿','mainFrame');
+			g.add(300.014,300.01,'SubPage_서브페이지_클로셋','_guide/html/layout_sub_closet.html','템플릿','mainFrame');
+			g.add(300.0141,300.01,'SubPage_서브페이지_클로셋02','_guide/html/layout_sub_closet02.html','템플릿','mainFrame');
+			g.add(300.02,300,'Popup_팝업');
+			g.add(300.021,300.02,'Window Popup_윈도우팝업','_guide/html/layout_popup.html','템플릿','mainFrame');
+			g.add(300.022,300.02,'Layer Popup_레이어팝업','_guide/html/layout_popup_layer.html','템플릿','mainFrame');
+			g.add(300.023,300.02,'레이어팝업 예시','_guide/html/layout_popup_layer02.html','템플릿','mainFrame');
+
+			g.add(400,0,'컨텐츠 guide');
+			g.add(400.02,400,'List_리스트');
+			g.add(400.021,400.02,'Text_텍스트','_guide/html/content_list_text.html','템플릿','mainFrame');
+			g.add(400.022,400.02,'Bullet_불릿','_guide/html/content_list_bullet.html','템플릿','mainFrame');
+			g.add(400.023,400.02,'Image_이미지','_guide/html/content_list_image.html','템플릿','mainFrame');
+			g.add(400.024,400.02,'Form_입력폼','_guide/html/content_list_form.html','템플릿','mainFrame');
+			g.add(400.03,400,'Area_영역');
+			g.add(400.031,400.03,'Float_좌우 구분','_guide/html/content_area_float.html','템플릿','mainFrame');
+			g.add(400.032,400.03,'Box_박스','_guide/html/content_area_box.html','템플릿','mainFrame');
+			g.add(400.033,400.03,'Scroll_스크롤','_guide/html/content_area_scroll.html','템플릿','mainFrame');
+			g.add(400.034,400.03,'Align_정렬','_guide/html/content_area_align.html','템플릿','mainFrame');
+			g.add(400.05,400,'Icon_아이콘','_guide/html/content_icon.html','템플릿','mainFrame');
+			g.add(400.06,400,'Loading_로딩영역','_guide/html/content_loading.html','템플릿','mainFrame');
+			document.write(g);
+			//]]>
+		</script>
+<!-- //Guide -->
+
+
+	</div>
+</body>
+</html>
